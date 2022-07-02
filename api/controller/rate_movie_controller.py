@@ -26,6 +26,12 @@ class RateMovieController(BaseController):
         response = self.request.post(rate_movie_url, payload, headers=self.headers)
         return response
 
+    def rate_movie_as_unauth(self, id, value):
+        payload = {'value': value}
+        rate_movie_anauth_url = f"{BASE_URI}/{id}{self.request_url}{GUEST_SESSION_ID}{self._get_guest_session_id()}_anauth"
+        response = self.request.post(rate_movie_anauth_url, payload, headers=self.headers)
+        return response
+
     def _get_request_token(self):
         token_url = f"{AUTH_BASE_URI}{AUTHENTICATION_TOKEN}api_key={API_KEY}"
         resp = self.request.get(token_url)
