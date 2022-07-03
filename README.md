@@ -1,4 +1,4 @@
-# b_api_assignment
+# API tests
 
 #Starting Tests in Docker
 Docker container build and start commands look like:
