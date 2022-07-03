@@ -18,6 +18,7 @@ These instructions will get you a copy of the project up and running on your loc
 Prerequisites
 --------------
 Git
+
 Docker
 
 Installing
@@ -35,7 +36,8 @@ Generate Allure Report from command line mode
 -------------------
 `allure serve allure-results`
 
-#Starting Tests in Docker
+Starting Tests in Docker
+-------------------
 Docker container build and start commands look like:
 To build container run:
 
