@@ -38,6 +38,9 @@ Generate Allure Report from command line mode
 #Starting Tests in Docker
 Docker container build and start commands look like:
 To build container run:
+
 `docker build -t pytest_runner .`
+
 To start the run of the tests run the command:
+
 `docker run --rm -it --mount type=bind,source="$(pwd)",target=/api_test_framework/ pytest_runner`
