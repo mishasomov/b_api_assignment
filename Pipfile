@@ -11,6 +11,7 @@ pytest = "*"
 python-dotenv = "*"
 cerberus = "*"
 allure-pytest = "*"
+assertpy = "*"
 
 [requires]
 python_version = "3.7"
