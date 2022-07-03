@@ -9,6 +9,7 @@ from config import GUEST_AUTHENTICATION_SESSION
 from config import GUEST_SESSION_ID
 
 from api.request import APIRequest
+import allure
 
 
 class RateMovieController(BaseController):
@@ -20,13 +21,15 @@ class RateMovieController(BaseController):
         self.endpoint = RATE_MOVIE
         self.request_url = f"{RATE_MOVIE}api_key={API_KEY}"
 
+    @allure.step('Rate movie with valid guest session')
     def rate_movie(self, id, value):
         payload = {'value': value}
         rate_movie_url = f"{BASE_URI}/{id}{self.request_url}{GUEST_SESSION_ID}{self._get_guest_session_id()}"
         response = self.request.post(rate_movie_url, payload, headers=self.headers)
         return response
 
-    def rate_movie_as_unauth(self, id, value):
+    @allure.step('Rate movie being unauthenticated')
+    def rate_movie_being_unauth(self, id, value):
         payload = {'value': value}
         rate_movie_anauth_url = f"{BASE_URI}/{id}{self.request_url}{GUEST_SESSION_ID}{self._get_guest_session_id()}_anauth"
         response = self.request.post(rate_movie_anauth_url, payload, headers=self.headers)

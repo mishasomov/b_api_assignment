@@ -52,3 +52,4 @@ pip-wheel-metadata/
 # pytest debug logs generated via --debug
 pytestdebug.log
 .DS_Store
+allure_results
