@@ -39,6 +39,7 @@ Run the command from cmd with parameters
 Starting Tests in Docker
 -------------------
 Docker container build and start commands look like:
+
 To build container run:
 
 `docker build -t pytest_runner .`
