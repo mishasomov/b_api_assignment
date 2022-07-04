@@ -2,7 +2,7 @@ import pytest
 from api.controller.rate_movie_controller import RateMovieController
 from api.controller.top_rated_movies_controller import TopRatedMoviesController
 from cerberus import Validator
-from helpers.schemas import Schemas
+from data.schemas import Schemas
 import allure
 
 
