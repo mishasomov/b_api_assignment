@@ -37,8 +37,8 @@ class RateMovieController(BaseController):
 
     def _get_request_token(self):
         token_url = f"{AUTH_BASE_URI}{AUTHENTICATION_TOKEN}api_key={API_KEY}"
-        resp = self.request.get(token_url)
-        token = resp.as_dict
+        response = self.request.get(token_url)
+        token = response.as_dict
         return token
 
     def _get_guest_session_id(self):
